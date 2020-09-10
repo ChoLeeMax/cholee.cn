@@ -1,0 +1,64 @@
+.top-list-panel .top-item {
+    padding: 10px 0;
+}
+.top-list-panel .top-item:first-child{
+    padding: 0 0 10px 0;
+}
+.carou-contian .laodMore {
+    display: none;
+    height: 40px;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    background: #eee;
+    cursor: pointer;
+}
+.carou-contian .top-nav{
+    position: absolute;
+    top: 0px;
+    color: #fff;
+    width: 60px;
+    left: -60px;
+    text-align: center;
+}
+.carou-contian .top-nav.top-nav-scroll{
+    position: fixed;
+    top: 100px;
+    left: 25%;
+    transform: translateX(-100%);
+}
+.carou-contian .top-nav .top-nav-item{
+    padding: 10px;
+}
+
+.carou-contian .top-nav .top-nav-item.select::after{
+    position: absolute;
+    right: 0;
+    content: '';
+    width: 0;
+    height: 0;
+    border-top:10px solid transparent;
+    border-bottom:10px solid transparent;
+    border-right:10px solid #fff;
+}
+.carou-contian .top-nav .top-nav-item:hover{
+    cursor: pointer;
+    background-color:#fff;
+    color: #333;
+}
+
+.top-list-panel .top-item img {
+    max-width: 192px;
+}
+
+.top-list-panel .top-item .top-author {
+    padding: 5px 0;
+    color: rgba(0,0,0,0.4);
+}
+.top-author .top-source{
+    margin-right: 10px;
+}
+.layui-col-title a{
+    font-weight: bold
+}

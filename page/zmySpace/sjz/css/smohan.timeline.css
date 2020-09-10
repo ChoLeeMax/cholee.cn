@@ -1,0 +1,39 @@
+/**
+ * SmohanTimeLine
+ * URL: http://www.smohan.net/lab/smohan_timeline.html
+ * Author : Smohan
+ * Version : 1.0
+ * 使用请保留以上信息，谢谢支持，作者官网：http://www.smohan.net
+ */
+@charset "utf-8";
+*{margin: 0;padding: 0;}
+body{font-size: 14px;color:#686868;background: url("../images/body_repeat.jpg") repeat;}
+a{color: #ff5000;text-decoration: none;}
+.back{display: inline-block;height: 30px;padding:2px 15px;border-radius: 4px;background: rgba(0,0,0,.3);position:fixed;right: 20px;top: 20px;line-height: 30px;}
+.back a{color: #ffffff;}
+.back:hover{background: #212121;}
+.wraper{width:1020px;margin:0 auto;}
+.container{margin:60px 0;overflow: hidden;}
+.info{text-shadow: 0 1px 0 rgba(255,255,255,.5);}
+.info h3{font-size: 30px;padding: 10px 0; text-align: center;font-weight: 800;color: #363636;}
+.info p{padding: 10px 0; text-align: center;text-indent:300px;font-size: 20px;font-style: italic;}
+/*时间轴样式*/
+#TimeLine{width:100%;height:auto;min-height:600px;position:relative;padding:20px 0;margin-top:30px; font-size:14px;}
+#TimeLine > .lines{width:2px; height:0; background:#c8c8c8; position:absolute; top:-30px;}
+#TimeLine > .item{width:45%;height:auto; min-height:120px; background:#fff; position:absolute;}
+#TimeLine > .item:hover{box-shadow:0 1px 10px rgba(0, 0, 0, 0.1); background-color:rgba(255,255,255,.9);}
+#TimeLine > .item .point{display:block; width:22px; height:22px; background:url("../images/icons.png") -138px 0 no-repeat; z-index:9; position:absolute; cursor:pointer; }
+#TimeLine > .item .point:hover{ background-position:-138px -22px;}
+#TimeLine > .item .cornerL,#TimeLine > .item .cornerR{display:block; width:22px; height:30px; background:url("../images/icons.png") 0 -95px no-repeat; position:absolute;}
+#TimeLine > .item .cornerL{ background-position:-22px -95px;}
+#TimeLine > .item .cornerR{ background-position:0px -95px;}
+
+
+
+.item-wraper{padding:10px;height: auto;overflow: hidden;word-break: break-all;}
+.item-wraper > img,.item-wraper > embed{max-width: 100%;}
+.item-wraper > p{line-height: 22px;text-indent: 28px;}
+.item-wraper > p > strong{font-size: 18px;color: #ff5000;font-style: italic;padding: 0 3px;}
+
+
+

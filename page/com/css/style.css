@@ -1,0 +1,281 @@
+/* 全局弹窗样式 */
+
+body,
+div {
+    box-sizing: border-box;
+}
+
+body .custom-class .layui-layer-title {
+    text-align: left;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tr {
+    text-align: right;
+}
+
+.md {
+    position: relative;
+}
+
+.cw {
+    color: #fff
+}
+
+.ib {
+    display: inline-block;
+}
+
+h2,
+h3 {
+    font-size: 18px;
+}
+
+.line {
+    border-left: solid 1px #e6e6e6;
+    margin: 0 10px;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    clear: both;
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.text-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.layui-bg-darkgreen {
+    background-color: #009688;
+}
+
+.layui-bg-darkred {
+    background-color: #FF5722;
+}
+
+.layui-bg-darkorange {
+    background-color: #FFB800;
+}
+
+.layui-bg-darkblue {
+    background-color: #1E9FFF;
+}
+
+.layui-bg-darkOrange {
+    background-color: #bf5a15;
+}
+
+.layui-bg-darkRed {
+    background-color: #9a1616;
+}
+
+.layui-bg-darkPink {
+    background-color: #9a165a;
+}
+
+.layui-bg-lightBlue {
+    background-color: #4390df;
+}
+
+.layui-bg-lightOlive {
+    background-color: #78aa1c;
+}
+
+.layui-bg-lightOrange {
+    background-color: #ffc194;
+}
+
+.layui-bg-lightPink {
+    background-color: #f472d0;
+}
+
+.layui-bg-grayed {
+    background-color: #585858;
+}
+
+.layui-col-title {
+    cursor: pointer;
+    padding: 5px 0 10px 0;
+    font-size: 16px;
+    text-align: justify;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.layui-col-title:hover a {
+    color: #1E9FFF;
+}
+
+
+/* 头部样式 */
+
+.text-direct {
+    text-align: right;
+    background-color: #4b505d;
+}
+
+.layui-nav .head-nav {
+    float: left;
+    margin: 10px 20px 0 0;
+}
+
+.logo-text {
+    font-size: 30px;
+    font-style: oblique;
+    background-image: -webkit-linear-gradient(left, #fff, #E6D205 25%, #fff 50%, #E6D205 75%, #fff);
+    -webkit-text-fill-color: transparent;
+    /* 文字镂空透明 */
+    -webkit-background-clip: text;
+    /* 剪裁文字 */
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: animote 4s infinite linear;
+}
+
+@-webkit-keyframes animote {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+
+/* 中间容器 */
+
+.com-contian {
+    position: relative;
+    width: 50%;
+    min-height: 900px;
+    background: #ffffff;
+    margin: 0 auto;
+    color: #666;
+    padding: 10px;
+}
+
+
+/* 脚部样式 */
+
+footer {
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    background-color: #4b505d;
+    color: #9E9E9E;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer .provider {
+    height: 16px;
+    width: 14px;
+    display: inline-block;
+    background: url("../image/police.png");
+    position: relative;
+    top: 3px;
+    right: 3px;
+}
+
+.footer .connect .sub-div {
+    position: relative;
+    padding-right: 10px;
+}
+
+.footer .connect .sub-div i {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: -110px;
+    left: 0;
+    /* border-bottom: #bfbfbf solid 1px; */
+    border-radius: 5px;
+}
+
+.footer .connect .sub-div .wechat {
+    display: none;
+    background: url(../image/tencent/wechat.png)
+}
+
+.footer .connect .sub-div .weqq {
+    display: none;
+    background: url(../image/tencent/weqq.png)
+}
+
+.footer .connect .sub-div .triangle {
+    /* display: none; */
+    width: 0;
+    height: 0;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #bfbfbf;
+    border-left: 8px solid transparent;
+}
+
+.footer .connect .sub-div:hover i {
+    display: block;
+}
+
+@media screen and (min-height: 1020px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+/* 底部小火箭 */
+
+.layui-fixbars {
+    position: fixed;
+    right: 20px;
+    bottom: 15px;
+    z-index: 999;
+}
+
+.layui-fixbars li {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 1px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 40px;
+    color: #fff;
+    border-radius: 2px;
+}
+
+
+/* loading */
+
+.com-loading {
+    display: none;
+    position: absolute;
+    left: 25%;
+    top: 100px;
+    right: 25%;
+    bottom: 0;
+    background: #fff;
+    opacity: .5;
+}

@@ -1,0 +1,77 @@
+blockquote {
+    font-weight: bold;
+}
+
+.playerH5 {
+    width: 100%;
+    height: 100%;
+}
+
+.teamImg {
+    width: 30px;
+}
+
+.layui-elem-quote {
+    background-color: #fff;
+}
+
+.layui-icon-date {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.layui-icon-date:before {
+    content: "\e637";
+    color: #009688;
+    margin-right: 5px;
+}
+
+.paneltitle {
+    color: red;
+}
+
+.layui-table-cell:hover a {
+    color: #1E9FFF;
+}
+
+
+/* 比分面板容器 */
+
+.grid-demo {
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.scores-panel .panel-top {
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+}
+
+.panel-top .layui-icon-play,
+.panel-top .layui-icon-play:hover {
+    font-size: 14px;
+    color: #1E9FFF;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.layui-icon-play:before {
+    margin-right: 5px;
+}
+
+.scores-panel .panel-btom,
+.scores-panel .panel-mid {
+    font-size: 0;
+}
+
+.scores-panel .teaminfo {
+    display: inline-block;
+    width: 33%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.scores-panel .teaminfo .team-img {
+    width: 50px;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="李超,个人网页，个人空间">
+    <meta name="author" content="cholee">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>www.cholee.cn</title>
+    <!-- <link rel="shortcut icon" href="www.cholee.cn/image/cholee.ico" type="image/x-icon" /> -->
+    <!-- 公共css -->
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../com/css/style.css">
+    <!-- 公共css结束 -->
+    <!-- 页面css -->
+    <link rel="stylesheet" href="./css/calendar.css">
+    <!-- 页面css结束 -->
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="com-header"></header>
+    <!-- 中间内容容器 -->
+    <div class="com-contian">
+        <div class="layui-tab" lay-filter="tabTo" style="margin:0">
+            <ul class="layui-tab-title">
+                <li class="layui-this">历史今日</li>
+                <li>星座运势</li>
+                <li>黄历查询</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show" id="history">
+                    <div class="today-iframe layui-text">
+                        <h3 style="margin-bottom: 10px">历史上的今天</h3>
+                        <iframe src="http://www.todayonhistory.com/code/5.html?w=350&h=400&bky=none&bks=0&bkc=#C1C1C1&fs=14&fc=#666&hg=20&ie=0&xhx=none&sd=0&px=2&len=0&sk=4&n=0" width="350" height="400" scrolling="no" frameborder="0" allowtransparency="true" style="border: 0px none #C1C1C1"></iframe>
+                    </div>
+                    <div class="today-list">
+                        <ul class="layui-timeline" id="tody-list"></ul>
+                    </div>
+                </div>
+                <div class="layui-tab-item" id="luckyStar">
+                    <div class="luckyStar-sel">
+                        <button class="luckyStar-btn luckyStar-warm">白羊座</button>
+                        <button class="luckyStar-btn">金牛座</button>
+                        <button class="luckyStar-btn">双子座</button>
+                        <button class="luckyStar-btn">巨蟹座</button>
+                        <button class="luckyStar-btn">狮子座</button>
+                        <button class="luckyStar-btn">处女座</button>
+                        <button class="luckyStar-btn">天秤座</button>
+                        <button class="luckyStar-btn">天蝎座</button>
+                        <button class="luckyStar-btn">射手座</button>
+                        <button class="luckyStar-btn">摩羯座</button>
+                        <button class="luckyStar-btn">水瓶座</button>
+                        <button class="luckyStar-btn">双鱼座</button>
+                    </div>
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                        <legend id="luckyStar-title">白羊座</legend>
+                    </fieldset>
+                    <div class="layui-collapse" lay-accordion="">
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">年度密码</h2>
+                            <div class="layui-colla-content layui-show">
+                                <p class="lukey-info"></p>
+                                <p class="lukey-text"></p>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">事业运</h2>
+                            <div class="layui-colla-content">
+                                <p class="lukey-career"></p>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">感情运</h2>
+                            <div class="layui-colla-content">
+                                <p class="lukey-love"></p>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">健康</h2>
+                            <div class="layui-colla-content">
+                                <p class="lukey-health"></p>
+                            </div>
+                        </div>
+                        <div class="layui-colla-item">
+                            <h2 class="layui-colla-title">财运</h2>
+                            <div class="layui-colla-content">
+                                <p class="lukey-finance"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                        <legend id="luckyStar-title">星座符号</legend>
+                    </fieldset>
+                    <table id="layui-starTable"></table>
+                </div>
+                <div class="layui-tab-item">
+                    <div class="site-demo-laydate" style="min-height:275px;">
+                        <div class="layui-inline" id="dateSelect" style="float:left"></div>
+                        <div class="huanli-panel">
+                            <ul class="huanli-list">
+                                <li><strong>【阴历】</strong> <span data-key="yinli" class="huanli-text">-</span> </li>
+                                <li><strong>【阳历】</strong> <span data-key="yangli" class="huanli-text">-</span></li>
+                                <li><strong>【五行】</strong> <span data-key="wuxing" class="huanli-text">-</span></li>
+                                <li><strong class="yellow">【当日冲煞】</strong> <span data-key="chongsha" class="huanli-text">-</span></li>
+                                <li><strong class="red">【彭祖百忌】</strong> <span data-key="baiji" class="huanli-text">-</span></li>
+                                <li><strong class="blue">【吉神宜趋】</strong> <span data-key="xiongshen" class="huanli-text">-</span></li>
+                                <li><strong class="red">【凶神宜忌】</strong> <span data-key="jishen" class="huanli-text">-</span></li>
+                                <li><strong class="blue">【宜】</strong> <span data-key="yi" class="huanli-text">-</span></li>
+                                <li><strong class="red">【忌】</strong> <span data-key="ji" class="huanli-text">-</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="keyWord-list">
+                        <fieldset class="layui-elem-field layui-field-title" style="margin-top: 20px;">
+                            <legend id="luckyStar-title">黄历术语</legend>
+                        </fieldset>
+                        <div class="keyWord-item">
+                            <a target="_blank" href="https://baike.baidu.com/item/黄历"><b>黄历，</b></a>
+                            <span>又称老黄历、皇历，是在中国农历基础上产生出来的，带有每日吉凶宜忌的一种万年历。黄历相传是由轩辕黄帝创制，故称为黄历。黄历主要内容为二十四节气，每天的宜忌、干支、值神、星宿、月相、吉神凶煞等。</span>
+                        </div>
+                        <div class="keyWord-item">
+                            <a target="_blank" href="https://baike.baidu.com/item/五行"><b>五行，</b></a>
+                            <span>是中国古代道教哲学的一种系统观，广泛用于中医、堪舆、命理、相术和占卜等方面。五行的意义包涵借着阴阳演变过程的五种基本动态：水（代表润下）、火（代表炎上）、金（代表收敛）、木（代表伸展）、土（代表中和）。中国古代哲学家用五行理论来说明世界万物的形成及其相互关系。它强调整体，旨在描述事物的运动形式以及转化关系。阴阳是古代的对立统一学说，五行是原始的系统论。</span>
+                        </div>
+                        <div class="keyWord-item">
+                            <a target="_blank" href="https://baike.baidu.com/item/冲煞"><b>当日冲煞，</b></a>
+                            <span>在黄历的律法里，五行相生相克的观念，犹如自然界的协调，有一定的规律，当两者发生冲、煞的情况时，基于趋吉避凶的心态，人们往往也会听从古法的建议，明哲保身。</span>
+                        </div>
+                        <div class="keyWord-item">
+                            <a target="_blank" href="https://baike.baidu.com/item/彭祖百忌"><b>彭祖百忌，</b></a>
+                            <span>指的是在天干地支记日中的某日或当日里的某时不要做某事否则会发生某事。彭祖，道家先驱，是中国远古道家的重要人物，他以善养生而长寿</span>
+                        </div>
+                        <div class="keyWord-item">
+                            <a target="_blank" href="https://baike.baidu.com/item/吉神"><b>吉神宜趋，</b></a>
+                            <span>在择日时应该在吉神多的日子做特定的事，以增进行事的吉祥与顺利。</span>
+                        </div>
+                        <div class="keyWord-item">
+                            <a target="_blank" href="https://baike.baidu.com/item/凶神"><b>凶神宜忌，</b></a>
+                            <span>黄历中的凶神是指“神煞”中的“煞”，是导致凶险的根源，宜是适合做某事情，忌是不适合做某事情。“神”是吉神，“煞”是凶神。</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 回到顶部按钮 -->
+    <ul class="layui-fixbars">
+        <li id="backTop" onclick="backTop(this)" class="layui-icon layui-fixbars-top layui-bg-green"></li>
+    </ul>
+    <!-- 数据加载设置 -->
+    <div class="com-loading"></div>
+    <!-- 脚部 -->
+    <footer id="com-footer"></footer>
+    <!-- 公共依赖js -->
+    <script src="../../lib/layui/layui.js"></script>
+    <script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../lib/Template/template.js"></script>
+    <script src="../com/appCom.js"></script>
+    <script src="../com/main.js"></script>
+    <!-- 公共依赖js结束-->
+    <!-- 首页js -->
+    <script src="./js/calendar.js"></script>
+    <!-- 首页js结束 -->
+    <!-- 历史的今天html模板 -->
+    <script type="text/html" id="tody-tmp">
+        {{each list as item index}}
+        <li class="layui-timeline-item">
+            <i class="layui-icon layui-timeline-axis"></i>
+            <div class="layui-timeline-content layui-text">
+                <h3 class="layui-timeline-title">{{item.des}}</h3>
+                <img class="layui-timeline-img" src="{{item.pic}}">
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?338c7843b48b49dd4a8f7a56480ebbd7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</body>
+
+</html>

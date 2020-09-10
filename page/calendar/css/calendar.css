@@ -1,0 +1,85 @@
+/* 历史今天 */
+
+.layui-tab-content .today-iframe {
+    position: fixed;
+    right: 20%;
+}
+
+.layui-tab-content .today-list {
+    width: 60%;
+}
+
+.layui-tab-content .layui-timeline-img {
+    max-width: 100%;
+}
+
+
+/* 星座运势 */
+
+.luckyStar-btn {
+    display: inline-block;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    color: #666;
+}
+
+.luckyStar-warm {
+    color: #666;
+    background-color: #FFB800;
+}
+
+.lukey-info {
+    font-weight: bold;
+}
+
+
+/* 黄历样式 */
+
+.huanli-panel {
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.huanli-panel .huanli-list .huanli-text {
+    color: #666;
+}
+
+.huanli-panel .huanli-list li {
+    margin-bottom: 10px;
+    /* 文字超出隐藏处理,显示... */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.huanli-panel .huanli-list li .yellow {
+    color: #ffb800;
+}
+
+.huanli-panel .huanli-list li .red {
+    color: red;
+}
+
+.huanli-panel .huanli-list li .blue {
+    color: blue;
+}
+
+.keyWord-list {
+    /* float: left; */
+}
+
+.keyWord-list .keyWord-item {
+    padding: 5px 0 10px 0;
+    text-align: justify;
+}
+
+.keyWord-list .keyWord-item b {
+    color: #0066cc;
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="李超,个人网页，个人空间">
+    <meta name="author" content="cholee">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>www.cholee.cn</title>
+    <!-- <link rel="shortcut icon" href="favicon/cholee.ico" type="image/x-icon" /> -->
+    <!-- 公共css -->
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../com/css/style.css">
+    <!-- 公共css结束 -->
+    <!-- 页面css -->
+    <link rel="stylesheet" href="./css/jok.css">
+    <!-- 页面css结束 -->
+</head>
+
+<body>
+    <header id="com-header"></header>
+    <!-- 中间内容容器 -->
+    <div class="com-contian">
+        <div class="layui-tab" lay-filter="tabTo" style="margin:0">
+            <ul class="layui-tab-title">
+                <li class="layui-this" data-type="29">文字</li>
+                <li data-type="10">图片</li>
+                <li data-type="41">视频</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <ul class="jok-word" id="jok-word-list"></ul>
+                    <div class="laodMore">加载更多</div>
+                </div>
+                <div class="layui-tab-item">
+                    <ul class="jok-word" id="jok-img-list"></ul>
+                </div>
+                <div class="layui-tab-item">
+                    <ul class="jok-word" id="jok-video-list"></ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 右侧联系栏 -->
+    <div class="com-connect"></div>
+    <!-- 回到顶部按钮 -->
+    <ul class="layui-fixbars">
+        <li id="backTop" onclick="backTop(this)" class="layui-icon layui-fixbars-top layui-bg-green"></li>
+    </ul>
+    <!-- 数据加载设置 -->
+    <div class="com-loading"></div>
+    <footer id="com-footer"></footer>
+    <!-- 公共依赖js -->
+    <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+    <script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../lib/Template/template.js"></script>
+    <script src="../com/appCom.js"></script>
+    <script src="../../lib/particle.js"></script>
+    <script src="../com/main.js"></script>
+    <!-- 公共依赖js结束-->
+    <!-- 段子js -->
+    <script src="./js/jok.js"></script>
+    <!-- 段子js结束 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?338c7843b48b49dd4a8f7a56480ebbd7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- 文字和视频公共html模板 -->
+    <!-- muted 静音 -->
+    <script type="text/html" id="jok-word-tmp">
+        {{each list as item index}}
+        <li>
+            <div class="jok-usr">
+                <a href="{{item.weixin_url}}" title="分享" target="view_window">
+                {{if item.profile_image}}
+                <img class="jok-usr-icon" src="{{item.profile_image}}"> {{else}}
+                <img class="jok-usr-icon" src="./image/0.png"> {{/if}}
+               </a>
+                <div class="ib">
+                    <p class="jok-usr-name">{{item.name}}</p>
+                    <p class="jok-usr-date">{{item.passtime}}</p>
+                </div>
+            </div>
+            <div class="jok-cotent">
+                <p class="jok-word-text">{{item.text}}</p>
+                {{if item.videouri}}
+                <video class="jok-video" controls>
+                <source src="{{item.videouri}}"  type="video/mp4">
+                您的浏览器不支持video标签!
+            </video> {{/if}}
+                <div>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 图片html模板 大图判断独立出来模板 -->
+    <script type="text/html" id="jok-img-tmp">
+        {{each list as item index}}
+        <li>
+            <div class="jok-usr">
+                <a href="{{item.weixin_url}}" title="分享" target="view_window">
+                        {{if item.profile_image}}
+                        <img class="jok-usr-icon" src="{{item.profile_image}}"> {{else}}
+                        <img class="jok-usr-icon" src="./image/0.png"> {{/if}}
+                       </a>
+                <div class="ib">
+                    <p class="jok-usr-name">{{item.name}}</p>
+                    <p class="jok-usr-date">{{item.passtime}}</p>
+                </div>
+            </div>
+            <div class="jok-cotent">
+                <p class="jok-word-text">{{item.text}}</p>
+                <img class="jok-img" src="{{item.cdn_img}}">
+            </div>
+        </li>
+        {{/each}}
+    </script>
+</body>
+
+</html>

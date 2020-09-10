@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="李超个人网页空间，#阿里云最新优惠活动#">
+    <meta name="author" content="cholee">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>www.cholee.cn</title>
+    <link rel="shortcut icon" href="./image/cholee.ico" type="image/x-icon" />
+    <!-- 公共css -->
+    <link rel="stylesheet" href="./lib/layui/css/layui.css">
+    <link rel="stylesheet" href="./page/com/css/style.css">
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- 公共css结束 -->
+    <!-- 页面css -->
+    <link rel="stylesheet" href="./page/index/css/style.css">
+    <!-- 页面css结束 -->
+</head>
+
+<body class="layui-bg-grayed" id="bodybg">
+    <!-- 颜色选择换肤 -->
+    <div class="colorOption">
+        <p class="setting">Settings<span class="line"></span></p>
+        <div class="colorPanel ib">
+            <div class="colorTheme layui-bg-grayed"></div>
+            <div class="colorTheme layui-bg-darkgreen"></div>
+            <div class="colorTheme layui-bg-darkred"></div>
+            <div class="colorTheme layui-bg-darkorange"></div>
+            <div class="colorTheme layui-bg-darkblue"></div>
+            <div class="colorTheme layui-bg-lightBlue"></div>
+            <div class="colorTheme layui-bg-darkPink"></div>
+            <div class="colorTheme layui-bg-darkRed"></div>
+            <div class="colorTheme layui-bg-darkOrange"></div>
+            <div class="colorTheme layui-bg-lightOlive"></div>
+            <div class="colorTheme layui-bg-lightOrange"></div>
+            <div class="colorTheme layui-bg-lightPink"></div>
+        </div>
+        <span id="colorHide" class="fr cw">X</span>
+    </div>
+    <!-- 顶部消息/导航栏 -->
+    <div class="headerPanel">
+        <!--天气/跑马灯 -->
+        <div class="subHeader clearfix ">
+            <div class="subBlc fl cw " id="weather-info"></div>
+            <div class="subBlc fl cw">
+                <i class="layui-icon layui-icon-speaker bg-icon"></i>
+                <marquee class="bd-pmd" direction="left" scrollamount="3" onmouseover=this.stop() onmouseout=this.start()>免责声明:本网站不保证信息的准确性、有效性、及时性和完整性!。严禁转载,严禁商业用途!</marquee>
+            </div>
+            <div class="subBlc fr cw">
+                <nav>
+                    <a class="navText" href="page/top">头条</a><span class="line"></span>
+                    <a class="navText" href="page/calendar">黄历</a><span class="line"></span>
+                    <a class="navText" href="page/jok">段子</a><span class="line"></span>
+                    <a class="navText" href="page/per">简历</a><span class="line"></span>
+                    <img src="/image/more.png" id="colorShow" alt="换肤" title="换肤">
+                </nav>
+            </div>
+        </div>
+        <!-- logo -->
+        <div class="logoSearch">
+            <div class="logo-Panel"><span class="logo-text">Cholee Developer</span></div>
+            <div class="layui-search">
+                <input type="text" placeholder="全网搜" class="search-txt">
+                <i class="search-icon" id="search"></i>
+            </div>
+        </div>
+    </div>
+    <!-- 中间内容容器 -->
+    <div class="com-contian carou-contian">
+        <!-- 图片滚动 -->
+        <div class="layui-row layui-row-wrp">
+            <div class="layui-col-md6 layui-col-panel layui-panel-left">
+                <!-- 轮播 -->
+                <div class="layui-carousel" id="carou-ind">
+                    <div carousel-item="">
+                        <div>
+                            <a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=2w2innsn"><img class="carou-img" src="./image/carousel/1.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://promotion.aliyun.com/ntms/act/shoppingcart.html?userCode=2w2innsn"><img class="carou-img" src="./image/carousel/2.png"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md6 layui-col-panel">
+                <h2 class="layui-col-catgory">微信精选</h2>
+                <div id="wexin-panel"></div>
+                <div id="wexin-page"></div>
+            </div>
+        </div>
+        <!-- -->
+        <div class="layui-row layui-row-wrp">
+            <div class="layui-col-md6 layui-col-panel layui-panel-left">
+            </div>
+            <div class="layui-col-md6 layui-col-panel"></div>
+        </div>
+    </div>
+    <!-- 搜索结果面板 -->
+    <div class="com-contian search-contian">
+        <div class="search-result">
+            <ul id="search-list"></ul>
+        </div>
+        <div>
+            <button class="layui-btn layui-btn-primary layui-btn-sm" id="search-back">返回</button>
+            <div id="search-page"></div>
+        </div>
+    </div>
+    <ul class="layui-fixbars">
+        <li id="backTop" onclick="backTop(this)" class="layui-icon layui-fixbars-top layui-bg-green"></li>
+    </ul>
+    <!-- 数据加载设置 -->
+    <div class="com-loading"></div>
+    <!-- 脚部 -->
+    <footer id="com-footer"></footer>
+    <!-- CDN加载 -->
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?338c7843b48b49dd4a8f7a56480ebbd7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- 公共依赖js -->
+    <script src="./lib/layui/layui.js" charset="utf-8"></script>
+    <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./lib/Template/template.js"></script>
+    <script src="./page/com/appCom.js"></script>
+    <script src="./page/com/main.js"></script>
+    <!-- 公共依赖js结束-->
+    <!-- 首页js -->
+    <script src="./lib/particle.js"></script>
+    <script src="./page/index/index.js"></script>
+    <!-- 首页js结束 -->
+    <!-- 搜索结果模板 -->
+    <script type="text/html" id="result-tmp">
+        {{each list as item index}} {{if item.title}}
+        <li>
+            <h2>
+                <a class="result-title" href="{{item.url}}" target="_blank">{{item.title}}</a>
+            </h2>
+            <p class="result-text">{{item.abs}}</p>
+        </li>
+        {{/if}} {{/each}}
+    </script>
+    <!-- <script type="text/javascript">
+        window.onload = function() {
+            //配置
+            var config = {
+                    vx: 4, //小球x轴速度,正为右，负为左
+                    vy: 4, //小球y轴速度
+                    height: 2, //小球高宽，其实为正方形，所以不宜太大
+                    width: 2,
+                    count: 250, //点个数
+                    color: "255, 255, 255", //点颜色
+                    stroke: "255, 255, 255", //线条颜色
+                    dist: 6000, //点吸附距离
+                    e_dist: 20000, //鼠标吸附加速距离
+                    max_conn: 10 //点到点最大连接数
+                }
+                //调用
+            CanvasParticle(config);
+        }
+    </script> -->
+</body>
+
+</html

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="李超个人网页空间，#阿里云最新优惠活动#">
+    <meta name="author" content="cholee">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>www.cholee.cn</title>
+    <link rel="shortcut icon" href="./image/cholee.ico" type="image/x-icon" />
+    <!-- 公共css -->
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../page/com/css/style.css">
+    <!-- 页面css -->
+    <link rel="stylesheet" href="./css/top.css">
+</head>
+
+<body class="layui-bg-grayed" id="bodybg">
+    <header id="com-header"></header>
+    <!-- 中间内容容器 -->
+    <div class="com-contian carou-contian">
+        <!-- 头条-->
+        <div class="top-list-panel" id="top-list"></div>
+    </div>
+    <ul class="layui-fixbars">
+        <li id="backTop" onclick="backTop(this)" class="layui-icon layui-fixbars-top layui-bg-green"></li>
+    </ul>
+    <!-- 数据加载设置 -->
+    <div class="com-loading"></div>
+    <!-- 脚部 -->
+    <footer id="com-footer"></footer>
+    <!-- CDN加载 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?338c7843b48b49dd4a8f7a56480ebbd7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- 公共依赖js -->
+    <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+    <script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../lib/Template/template.js"></script>
+    <script src="../com/appCom.js"></script>
+    <script src="../com/main.js"></script>
+    <!-- 公共依赖js结束-->
+    <!-- 首页js -->
+    <script src="./js/top.js"></script>
+    <!-- 首页js结束 -->
+    <!-- 搜索结果模板 -->
+    <script type="text/html" id="top-list-tmp">
+        {{each list as item index}}
+        <div class="top-item">
+            <p class="layui-col-title"><a href="{{item.src}}" target="_blank">{{item.title}}</a></p>
+            <img src="{{item.thumbnail_pic_s}}"> {{if item.thumbnail_pic_s02}}
+            <img src="{{item.thumbnail_pic_s02}}"> {{/if}} {{if item.thumbnail_pic_s03}}
+            <img src="{{item.thumbnail_pic_s03}}"> {{/if}}
+            <div class="top-author">{{item.author_name}}</div>
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html

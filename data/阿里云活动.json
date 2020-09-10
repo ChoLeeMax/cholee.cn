@@ -1,0 +1,66 @@
+{
+    "activityList": [
+        {
+            "activityImage": "https://img.alicdn.com/tfs/TB148xDIQvoK1RjSZFDXXXY3pXa-267-157.jpg",
+            "title": "【开年HI购季】爆款云产品5折",
+            "goodFriend": "首次购买高性能云服务器，享低至5折优惠",
+            "myAward": "采购季活动中产品仅支持新用户25%返佣，其他订单类型返佣不支持",
+            "activityUrl": "https://www.aliyun.com/acts/product-section-2019/new-users?userCode=2w2innsn",
+            "downloadUrl": "https://files.alicdn.com/tpsservice/b603518f3f04911928ca7076eea1b6a0.zip",
+            "key": 1,
+            "shareIsShow": true,
+            "onlyPc": true
+        },
+        {
+            "activityImage": "https://img.alicdn.com/tfs/TB1aDXhXpzqK1RjSZFvXXcB7VXa-259-194.jpg",
+            "title": "【助力企业上云】性能级主机2-5折",
+            "goodFriend": "首次购买高性能云服务器，享低至2折优惠",
+            "myAward": "推广好友直达下单页：好友访问链接即成为您的推广客户，购买返利产品您可获最高25%返现",
+            "activityUrl": "https://promotion.aliyun.com/ntms/act/enterprise-discount.html?userCode=2w2innsn",
+            "downloadUrl": "https://tk-sale.oss-cn-beijing.aliyuncs.com/CPS_ä¼\u0081ä¸\u009açº§å¤§ä¿\u0083_20180720.zip",
+            "key": 2,
+            "shareIsShow": true,
+            "onlyPc": true
+        },
+        {
+            "activityImage": "https://img.alicdn.com/tfs/TB17qJhXpzqK1RjSZFvXXcB7VXa-200-126.jpg",
+            "title": "【全民云计算】云主机低至2折",
+            "goodFriend": "爆款云服务器低至2折，1核1G¥293/元",
+            "myAward": "推广好友直达下单页：好友访问链接即成为您的推广客户，购买返利产品您可获最高25%返现",
+            "activityUrl": "https://promotion.aliyun.com/ntms/act/qwbk.html?userCode=2w2innsn",
+            "downloadUrl": "https://files.alicdn.com/tpsservice/47ecf02ae288c083d6dc7a9efa70660e.zip",
+            "key": 4,
+            "shareIsShow": true
+        },
+        {
+            "activityImage": "https://img.alicdn.com/tfs/TB1kJDyvSzqK1RjSZPxXXc4tVXa-504-320.jpg",
+            "title": "【商标注册服务】低至300元",
+            "goodFriend": "专业专注 极速申报 最快1分钟递交到商标局",
+            "myAward": "推广好友直达下单页：好友访问链接即成为您的推广客户，购买返利产品您可获最高25%返现",
+            "activityUrl": "https://tm.aliyun.com/?userCode=2w2innsn",
+            "downloadUrl": "https://files.alicdn.com/tpsservice/d2db64f3657a06d084251ada8810c69c.zip",
+            "key": 5,
+            "shareIsShow": true
+        },
+        {
+            "activityImage": "https://img.alicdn.com/tfs/TB1TFUulmzqK1RjSZFLXXcn2XXa-200-126.png",
+            "title": "【超高返现】购物车全产品返25%",
+            "goodFriend": "新客每满1000立减50元叠加代金券，老客也可一次性采购多种产品",
+            "myAward": "推广好友直达下单页：好友访问链接即成为您的推广客户，全站购物车购买：新客返25%老客返15%",
+            "activityUrl": "https://promotion.aliyun.com/ntms/act/shoppingcart.html?userCode=2w2innsn",
+            "downloadUrl": "https://files.alicdn.com/tpsservice/47ecf02ae288c083d6dc7a9efa70660e.zip",
+            "key": 6,
+            "shareIsShow": true
+        },
+        {
+            "activityImage": "https://img.alicdn.com/tfs/TB1NA.GlmzqK1RjSZFHXXb3CpXa-200-126.png",
+            "title": "【阿里云自营建站】买一年送一年",
+            "goodFriend": "千套精美模板 轻松建站：邀请好友和我一样建一个小站",
+            "myAward": "推广好友直达下单页：好友访问链接即成为您的推广客户，购买返利产品您可获最高25%返现",
+            "activityUrl": "https://www.aliyun.com/jianzhan/?userCode=2w2innsn",
+            "downloadUrl": "https://files.alicdn.com/tpsservice/47ecf02ae288c083d6dc7a9efa70660e.zip",
+            "key": 7,
+            "shareIsShow": true
+        }
+    ]
+}

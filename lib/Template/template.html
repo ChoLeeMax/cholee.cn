@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>template模板渲染</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript" src="./template.js"></script>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    .cotent {
+        margin-left: 20px;
+    }
+    
+    .cotent ul {
+        list-style: none;
+    }
+</style>
+
+<body>
+    <p>1.普通渲染if语句</p>
+    <div class="cotent" id="temp-info"></div>
+    <!-- 定义模板 -->
+    <script type="text/html" id="temp-info-user">
+        <p><span>姓名：</span><span>{{name}}</span></p>
+        <p><span>年龄：</span><span>{{age}}</span></p>
+        <p><span>性别：</span><span>{{sex}}</span></p>
+        <p><span>身高：</span><span>{{if height}}{{sex}}{{else}} **{{/if}}</span></p>
+    </script>
+    <p>语句结构:<pre>
+    {{if height}}
+         {{sex}}
+    {{else}} 
+         **
+    {{/if}}</pre>
+    </p>
+    <script type="text/javascript">
+        // 方式一
+        var userInfo = {
+            name: "cholee",
+            age: "27",
+            sex: "男",
+            height: false
+        }
+        var html1 = template("temp-info-user", userInfo); //数据以对象形式传入或template,("temp-info-user",{ item: userInfo })
+        document.getElementById('temp-info').innerHTML = html1;
+    </script>
+    <p>2.循环渲染</p>
+    <div class="cotent">
+        <ul id="temp-list"></ul>
+    </div>
+    <!-- 定义模板 -->
+    <!-- list为传入对象的属性,item数组元素，index数组索引 -->
+    <script type="text/html" id="temp-info-shop">
+        {{each list as item index}}
+        <li>{{index+1}} {{item.name}}</li>
+        {{/each}}
+    </script>
+    <!-- 定义json数据,填充模板 -->
+    <script type="text/javascript">
+        // 方式二
+        var shopList = {
+            list: [{
+                name: "微波炉"
+            }, {
+                name: "电压锅"
+            }, {
+                name: "洗衣机"
+            }]
+        };
+        var html2 = template("temp-info-shop", shopList);
+        document.getElementById("temp-list").innerHTML = html2;
+    </script>
+    <p>3.二维数组循环渲染</p>
+    <div class="cotent" id="twoArr"></div>
+    <script type="text/html" id="twoArr-list">
+        {{each list as item index}}
+        <div>
+            <span> {{item[0]}}</span>
+            <span>{{item[1]}}</span>
+        </div>
+        {{/each}}
+    </script>
+    <script type="text/javascript">
+        var data = {
+            list: [
+                ["李", "超"],
+                ["国", "家"]
+            ]
+        };
+        var html3 = template("twoArr-list", data);
+        document.getElementById("twoArr").innerHTML = html3;
+    </script>
+</body>
+
+</html>

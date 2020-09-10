@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="李超个人网页空间，#NBA直播、比分、数据#">
+    <meta name="author" content="cholee">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <title>www.cholee.cn</title>
+    <!-- <link rel="shortcut icon" href="./image/cholee.ico" type="image/x-icon" /> -->
+    <!-- 公共css -->
+    <link rel="stylesheet" href="../../lib/layui/css/layui.css">
+    <link rel="stylesheet" href="../../page/com/css/style.css">
+    <!-- 页面css -->
+    <link rel="stylesheet" href="./css/nba.css">
+</head>
+
+<body class="layui-bg-grayed" id="bodybg">
+    <header id="com-header"></header>
+    <!-- 中间内容容器 -->
+    <div class="com-contian">
+        <div class="layui-tab layui-tab-brief" lay-filter="tabclick">
+            <ul class="layui-tab-title">
+                <li class="layui-this">赛程</li>
+                <li>排名</li>
+                <li>球员</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item  layui-show">
+                    <blockquote class="layui-elem-quote">
+                        <div class="layui-input-inline">
+                            <span class="layui-icon layui-icon-date" id="selDate"></span>
+                            <span>一共<span class="paneltitle"></span>场比赛</span>
+                        </div>
+                    </blockquote>
+                    <div id="nbaScoresPanel">
+                        <div class="layui-row layui-col-space20" id="score-list"></div>
+                    </div>
+                </div>
+                <div class="layui-tab-item">
+                    <blockquote class="layui-elem-quote">东部联盟</blockquote>
+                    <div id="eastTeamRank"></div>
+                    <blockquote class="layui-elem-quote">西部联盟</blockquote>
+                    <div id="westReamRank"></div>
+                </div>
+                <div class="layui-tab-item">
+                    <p style="color:red">敬请期待!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="layui-fixbars">
+        <li id="backTop" onclick="backTop(this)" class="layui-icon layui-fixbars-top layui-bg-green"></li>
+    </ul>
+    <!-- 数据加载设置 -->
+    <div class="com-loading"></div>
+    <!-- 脚部 -->
+    <footer id="com-footer"></footer>
+    <!-- CDN加载 -->
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?338c7843b48b49dd4a8f7a56480ebbd7";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <!-- 公共依赖js -->
+    <script src="../../lib/layui/layui.js" charset="utf-8"></script>
+    <script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../lib/Template/template.js"></script>
+    <script src="../com/appCom.js"></script>
+    <script src="../com/main.js"></script>
+    <!-- 公共依赖js结束-->
+    <!-- 首页js -->
+    <script src="./js/nba.js"></script>
+    <!-- 首页js结束 -->
+    <!-- 搜索结果模板 -->
+    <script type="text/html" id="score-list-tmp">
+        {{each list as item index}}
+        <div class="layui-col-md6 scores-panel">
+            <div class="grid-demo">
+                <div class="panel-top">
+                    <span>{{item.profile.time}}</span> {{each item.urls as obj }}
+                    <a class="layui-icon layui-icon-play" href="{{obj.value}}" target="_Blank">{{obj.displayText}}</a> {{/each}}
+                </div>
+                <div class="panel-mid">
+                    <div class="teaminfo">
+                        <a href="{{item.homeTeam.teamSrc}}" target="_Blank"><img class="team-img" src="{{item.homeTeam.imgSrc}}"></a>
+                        <p>{{item.homeTeam.profile.name}}{{if item.homeTeam.games}}({{item.homeTeam.games}}){{/if}}</p>
+                    </div>
+                    <div class="teaminfo">
+                        <p>{{item.boxscore.homeScore}} - {{item.boxscore.awayScore}}</p>
+                    </div>
+                    <div class="teaminfo">
+                        <a href="{{item.awayTeam.teamSrc}}" target="_Blank"><img class="team-img" src="{{item.awayTeam.imgSrc}}"> </a>
+                        <p>{{item.awayTeam.profile.name}}{{if item.awayTeam.games}}({{item.awayTeam.games}}){{/if}}</p>
+                    </div>
+                </div>
+                {{if item.awayTeam.games}} {{/if}}
+            </div>
+        </div>
+        {{/each}}
+    </script>
+</body>
+
+</html

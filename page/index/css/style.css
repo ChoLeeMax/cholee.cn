@@ -1,0 +1,250 @@
+    /* 样式选择器 */
+    
+    .colorOption {
+        display: none;
+        width: 100%;
+        background: #1d1d1d;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .colorOption .setting {
+        display: inline-block;
+        float: left;
+        color: #fff;
+        font-weight: 400;
+        font-size: 30px;
+    }
+    
+    .colorOption .colorPanel {}
+    /* 顶部天气、导航样式 */
+    
+    .colorOption .colorPanel .colorTheme {
+        width: 30px;
+        height: 30px;
+        border: solid 1px #e6e6e6;
+        box-sizing: border-box;
+        margin: 1px 10px 0 0;
+        float: left;
+        cursor: pointer;
+    }
+    
+    .colorOption #colorHide {
+        cursor: pointer;
+    }
+    
+    .logoSearch {
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+    
+    .logoSearch .logo-Panel .logo-text {
+        font-size: 40px;
+    }
+    
+    .headerPanel {
+        text-align: center;
+    }
+    
+    .carou-img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .subHeader,
+    .colorOption {
+        padding: 5px 20px;
+        box-sizing: border-box;
+    }
+    
+    .subHeader #weather-info {
+        cursor: pointer;
+    }
+    
+    .subBlc .navText,
+    .subBlc .navText:hover {
+        color: #fff
+    }
+    
+    .subHeader .subBlc {
+        padding: 5px 0;
+    }
+    
+    .subHeader .subBlc .bg-icon {
+        display: inline-block;
+        font-size: 20px;
+    }
+    
+    .subHeader .subBlc .bgimg {
+        height: 20px;
+        height: 18px;
+        position: relative;
+        top: -1px;
+        left: 2px;
+    }
+    
+    .subHeader .subBlc img {
+        cursor: pointer;
+    }
+    
+    .subHeader .subBlc .bd-pmd {
+        margin-left: 10px;
+        width: 250px;
+    }
+    
+    .subHeader .move {
+        animation: SkyAqi 2s infinite linear;
+        -moz-animation: SkyAqi 2s infinite linear;
+        /* Firefox */
+        -webkit-animation: SkyAqi 2s infinite linear;
+        /* Safari 和 Chrome */
+        -o-animation: SkyAqi 2s infinite linear;
+    }
+    
+    @keyframes SkyAqi {
+        0% {
+            opacity: 1;
+        }
+        25% {
+            opacity: 0.8;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        75% {
+            opacity: 0.2;
+        }
+    }
+    /* 信息提示框 */
+    
+    .megWindow {
+        padding: 30px 100px;
+        color: red;
+    }
+    /* 头条、微信面板样式 */
+    
+    .layui-row-wrp {
+        padding-bottom: 10px;
+    }
+    
+    .layui-row-wrp .layui-col-panel {
+        min-height: 280px;
+    }
+    
+    .layui-row-wrp .layui-panel-left {
+        padding-right: 20px;
+    }
+    /* 搜索框 */
+    
+    .layui-row-wrp .layui-col-panel .layui-col-catgory {
+        padding-bottom: 5px;
+        border-bottom: solid 1px #bfbfbf;
+    }
+    
+    .layui-search {
+        position: relative;
+        padding: 0;
+        margin: 20px 0;
+        display: inline-block;
+    }
+    
+    .layui-search .search-txt {
+        height: 40px;
+        width: 25rem;
+        box-sizing: border-box;
+        padding: 0 10px;
+        /* background-attachment: fixed; */
+        font-size: 14px;
+    }
+    
+    .layui-search .search-txt:hover {
+        border: 2px solid #1E9FFF;
+    }
+    
+    .layui-search .search-icon {
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        display: inline-block;
+        background: url(../image/search.png);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    
+    .input_enter_placeholder {
+        color: #666;
+    }
+    /* 搜索框结束 */
+    /*搜索结果面板开始*/
+    
+    .search-contian {
+        display: none;
+    }
+    
+    .search-contian #search-back {
+        float: left;
+        margin-top: 10px;
+    }
+    
+    .search-contian .search-result .result-title {
+        color: #1E9FFF;
+        text-decoration: underline;
+    }
+    
+    .search-contian .search-result .result-text {
+        padding: 5px 0 15px 0;
+        width: 70%;
+        color: #666;
+        text-align: justify;
+        /* white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; */
+    }
+    
+    .search-contian .search-page {}
+    /*搜索结果面板结束*/
+    /* 图片增加动画 */
+    
+    .layui-row .grid-demo:hover img {
+        animation: SkyWind 0.8s linear;
+        -moz-animation: SkyWind 0.8s linear;
+        /* Firefox */
+        -webkit-animation: SkyWind 0.8s linear;
+        /* Safari 和 Chrome */
+        -o-animation: SkyWind 0.8s linear;
+    }
+    
+    @keyframes SkyWind {
+        0% {
+            transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            /* IE 9 */
+            -moz-transform: rotate(0deg);
+            /* Firefox */
+            -webkit-transform: rotate(0deg);
+            /* Safari 和 Chrome */
+            -o-transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            /* IE 9 */
+            -moz-transform: rotate(180deg);
+            /* Firefox */
+            -webkit-transform: rotate(180deg);
+            /* Safari 和 Chrome */
+            -o-transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            /* IE 9 */
+            -moz-transform: rotate(360deg);
+            /* Firefox */
+            -webkit-transform: rotate(360deg);
+            /* Safari 和 Chrome */
+            -o-transform: rotate(360deg);
+        }
+    }

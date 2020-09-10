@@ -1,0 +1,11 @@
+.top-list-panel .top-item {
+    padding: 5px 0;
+}
+
+.top-list-panel .top-item img {
+    width: 33%;
+}
+
+.top-list-panel .top-item .top-author {
+    padding: 3px 0;
+}
